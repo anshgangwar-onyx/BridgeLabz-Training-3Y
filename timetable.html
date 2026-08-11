@@ -1,141 +1,346 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Time Table</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: center;
         }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            font-size: 13px;
+
+        th {
+            background-color: #42a5e8;
+            color: white;
+            padding: 10px;
+            border: 1px solid white;
         }
-        .heading {
-            font-size: 18px;
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            color: #555;
+        }
+
+        .time {
+            background-color: #19a9ee;
+            color: white;
             font-weight: bold;
+            width: 9%;
         }
-        .subheading {
-            font-weight: bold;
-        }
-        .yellow {
-            background-color: yellow;
-        }
+
         .day {
             font-weight: bold;
-            width: 80px;
+            font-size: 16px;
         }
-        .time {
-            background-color: #f2f2f2;
+
+        .date {
             font-weight: bold;
+            font-size: 14px;
         }
-        .break {
-            background-color: #ddd;
-            font-weight: bold;
+
+        .subject {
+            line-height: 1.5;
         }
     </style>
 </head>
+
 <body>
-<table>
-    <!-- College Heading -->
-    <tr>
-        <th colspan="10" class="heading">
-            GLA UNIVERSITY, MATHURA
-        </th>
-    </tr>
-    <tr>
-        <th colspan="10">Institute of Engineering & Technology</th>
-    </tr>
-    <tr>
-        <th colspan="10">Computer Science & Engineering</th>
-    </tr>
-    <tr>
-        <th colspan="5">Time Table: Odd Semester Programme</th>
-        <th colspan="3">Course: Bachelor of Technology</th>
-        <th colspan="2">Session: 2026-2027</th>
-    </tr>
-    <!-- Details -->
-    <tr>
-        <th>Section: 3AD</th>
-        <th colspan="2">Semester: V</th>
-        <th colspan="3">Class Advisor</th>
-        <th colspan="2">0</th>
-        <th>w.e.f. 30/Jul/2026</th>
-        <th>Second</th>
-    </tr>
-    <!-- Period numbers -->
-    <tr>
-        <th rowspan="2">Day / Time</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-    </tr>-
-    <!-- Time -->
-    <tr class="time">
-        <td>08:00-09:00</td>
-        <td>09:00-10:00</td>
-        <td>10:00-11:00</td>
-        <td>11:00-12:00</td>
-        <td>12:00-01:00</td>
-        <td>01:00-02:00</td>
-        <td>02:00-03:00</td>
-        <td>03:00-04:00</td>
-        <td>04:00-05:00</td>
-    </tr>
-    <!-- Thursday -->
-    <tr>
-        <th class="day">Thursday</th>
-        <td></td>
-        <td></td>
-        <td>BCSC0011<br>ABX-11</td>
-        <td>PCPH0001<br>ABX-11</td>
-        <td>3AD2/BCSC0011<br>ABX-11</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <!-- Friday -->
-    <tr>
-        <th class="day">Friday</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>BCSC0007<br>ABX-11</td>
-        <td></td>
-        <td></td>
-        <td>PVPH0001<br>ABX-11</td>
-        <td>BCSE1008<br>ABX-11</td>
-    </tr>
-    <!-- Saturday -->
-    <tr>
-        <th class="day">Saturday</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-<br><br>
-</table>
+
+    <table>
+
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Time \ Day</th>
+
+                <th>
+                    <span class="day">Monday</span><br>
+                    <span class="date">03.08.2026</span>
+                </th>
+
+                <th>
+                    <span class="day">Tuesday</span><br>
+                    <span class="date">04.08.2026</span>
+                </th>
+
+                <th>
+                    <span class="day">Wednesday</span><br>
+                    <span class="date">05.08.2026</span>
+                </th>
+
+                <th>
+                    <span class="day">Thursday</span><br>
+                    <span class="date">06.08.2026</span>
+                </th>
+
+                <th>
+                    <span class="day">Friday</span><br>
+                    <span class="date">07.08.2026</span>
+                </th>
+            </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody>
+
+            <!-- 10:00 AM - 11:00 AM -->
+            <tr>
+                <td class="time">
+                    10:00 AM -<br>
+                    11:00 AM
+                </td>
+
+                <td class="subject">
+                    BCSC 0007<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSC 0011<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td>----</td>
+
+                <td class="subject">
+                    BCSC 0011<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 0281<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 11:00 AM - 12:00 PM -->
+            <tr>
+                <td class="time">
+                    11:00 AM -<br>
+                    12:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSC 0011<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PCPH 0002<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PQRH 0001<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td>----</td>
+
+                <td class="subject">
+                    BCSE 0281<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 12:00 PM - 01:00 PM -->
+            <tr>
+                <td class="time">
+                    12:00 PM -<br>
+                    01:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSE 1008<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PCPH 0002<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 1008<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PGDH 0001<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSC 0007<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 02:00 PM - 03:00 PM -->
+            <tr>
+                <td class="time">
+                    02:00 PM -<br>
+                    03:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSE 0281<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PQRH 0001<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 1251<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 1251<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PCPH 0002<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 03:00 PM - 04:00 PM -->
+            <tr>
+                <td class="time">
+                    03:00 PM -<br>
+                    04:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSE 0281<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSC 0011<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 1251<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    BCSE 1251<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td class="subject">
+                    PCPH 0002<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 04:00 PM - 05:00 PM -->
+            <tr>
+                <td class="time">
+                    04:00 PM -<br>
+                    05:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSC 0806<br>
+                    AB - II<br>
+                    Room - 5002
+                </td>
+
+                <td class="subject">
+                    BCSE 0807<br>
+                    AB - V<br>
+                    Room - B212A
+                </td>
+
+                <td class="subject">
+                    BCSC 0007<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+
+                <td>----</td>
+
+                <td class="subject">
+                    PVRH 0001<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+            <!-- 05:00 PM - 06:00 PM -->
+            <tr>
+                <td class="time">
+                    05:00 PM -<br>
+                    06:00 PM
+                </td>
+
+                <td class="subject">
+                    BCSC 0806<br>
+                    AB - II<br>
+                    Room - 5002
+                </td>
+
+                <td class="subject">
+                    BCSE 0807<br>
+                    AB - V<br>
+                    Room - B212A
+                </td>
+
+                <td>----</td>
+
+                <td>----</td>
+
+                <td class="subject">
+                    BCSE 1008<br>
+                    AB - VII<br>
+                    Room - 205
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
 </body>
 </html>
