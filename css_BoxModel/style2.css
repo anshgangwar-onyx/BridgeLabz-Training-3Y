@@ -1,0 +1,36 @@
+body {
+    font-family: Georgia, serif;
+}
+
+.links-box {
+    /* width: 50%; */
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.links-box h1 {
+    margin: 0;
+    padding: 25px;
+    font-size: 32px;
+    background-color: aqua;
+    border-bottom: 1px solid #aaa;
+}
+
+.links-box a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    color: #555;
+    font-size: 24px;
+    border-bottom: 1px solid #aaa;
+}
+
+.links-box a:last-child {
+    border-bottom: none;
+}
+
+.links-box a:hover {
+    background-color: #9a242d;
+    color: white;
+}
