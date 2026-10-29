@@ -1,0 +1,16 @@
+// Q6
+const employees = [
+    { name: "Amit", salary: 10000 },
+    { name: "Priya", salary: 15000 },
+    { name: "Rohan", salary: 20000 }
+];
+
+let totalPayout = 0;
+
+for (let i = 0; i < employees.length; i++) {
+    let annual = employees[i].salary * 12;
+    totalPayout += annual;
+    console.log(employees[i].name + " Annual Salary: " + annual);
+}
+
+console.log("Total Company Payout: " + totalPayout);

@@ -1,0 +1,12 @@
+// Q3
+const books = [
+    { title: "JS Basics", isbn: "101", issued: false },
+    { title: "HTML Guide", isbn: "102", issued: true },
+    { title: "CSS Tips", isbn: "103", issued: false }
+];
+
+for (let i = 0; i < books.length; i++) {
+    if (books[i].issued === false) {
+        console.log("Available Book: " + books[i].title);
+    }
+}

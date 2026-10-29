@@ -1,0 +1,10 @@
+// Q7
+function login(user, pass) {
+    if (user.length >= 5 && pass.length >= 8) {
+        console.log("Login Success");
+    } else {
+        console.log("Login Failed: Check username or password length");
+    }
+}
+
+login("anshg", "mypassword123");

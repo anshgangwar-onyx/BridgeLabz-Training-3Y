@@ -1,0 +1,8 @@
+// Q4
+function makeForm() {
+    let field = "Username";
+    let formHTML = "<label>" + field + "</label><br><input type='text'>";
+    console.log(formHTML);
+}
+
+makeForm();

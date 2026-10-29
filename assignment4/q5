@@ -1,0 +1,11 @@
+// Q5
+function bookTicket(name, email, seats) {
+    if (name !== "" && email.indexOf("@") !== -1 && seats >= 1 && seats <= 10) {
+        let ticket = { userName: name, userEmail: email, totalSeats: seats };
+        console.log("Booking Confirmed for " + ticket.userName + " | Seats: " + ticket.totalSeats);
+    } else {
+        console.log("Invalid booking details");
+    }
+}
+
+bookTicket("Rahul", "rahul@test.com", 3);

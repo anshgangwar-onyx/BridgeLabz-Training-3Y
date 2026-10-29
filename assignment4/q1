@@ -1,0 +1,13 @@
+// Q1
+const products = [
+    { name: "Laptop", price: 55000 },
+    { name: "Mouse", price: 850 },
+    { name: "Phone", price: 28000 },
+    { name: "Pen", price: 50 }
+];
+
+for (let i = 0; i < products.length; i++) {
+    if (products[i].price > 1000) {
+        console.log(products[i].name + " - ₹" + products[i].price);
+    }
+}

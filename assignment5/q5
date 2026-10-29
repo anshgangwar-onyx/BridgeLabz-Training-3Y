@@ -1,0 +1,23 @@
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.getName = function() {
+    console.log("Name: " + this.name);
+};
+
+function Student(name, branch) {
+    Person.call(this, name);
+    this.branch = branch;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.getBranch = function() {
+    console.log("Branch: " + this.branch);
+};
+
+const student1 = new Student("Rahul", "Computer Science");
+student1.getName();
+student1.getBranch();

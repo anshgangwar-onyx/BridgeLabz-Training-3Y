@@ -1,0 +1,23 @@
+// Q2
+function checkForm(name, email, phone) {
+    let valid = true;
+
+    if (name === "") {
+        console.log("Name is required");
+        valid = false;
+    }
+    if (email.indexOf("@") === -1) {
+        console.log("Invalid email");
+        valid = false;
+    }
+    if (phone.length !== 10) {
+        console.log("Phone must be 10 digits");
+        valid = false;
+    }
+
+    if (valid) {
+        console.log("Form is valid");
+    }
+}
+
+checkForm("Amit", "amit@test.com", "9876543210");

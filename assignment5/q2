@@ -1,0 +1,20 @@
+function applyOperation(numbers, operation) {
+    const result = [];
+    for (let i = 0; i < numbers.length; i++) {
+        result.push(operation(numbers[i]));
+    }
+    return result;
+}
+
+const numbers = [1, 2, 3, 4];
+
+const doubled = applyOperation(numbers, function(num) {
+    return num * 2;
+});
+
+const squared = applyOperation(numbers, function(num) {
+    return num * num;
+});
+
+console.log("Doubled:", doubled);
+console.log("Squared:", squared);
