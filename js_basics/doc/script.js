@@ -46,3 +46,6 @@ btnE2.addEventListener("click", fun2);
 console.log(headingE1)
 
 console.log("hello")
+
+
+
