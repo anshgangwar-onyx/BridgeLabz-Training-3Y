@@ -1,0 +1,23 @@
+const serverA = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Server A response in 2s");
+    }, 2000);
+});
+
+const serverB = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Server B response in 3s");
+    }, 3000);
+});
+
+Promise.race([serverA, serverB])
+    .then((fastest) => {
+        console.log("Fastest response:", fastest);
+    })
+    .catch((err) => console.log(err));
+
+Promise.all([serverA, serverB])
+    .then((results) => {
+        console.log("Deployment completed for all servers");
+    })
+    .catch((err) => console.log(err));

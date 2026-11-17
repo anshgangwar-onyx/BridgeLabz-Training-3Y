@@ -1,0 +1,24 @@
+const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
+
+async function runPipeline() {
+    try {
+        await delay();
+        console.log("Design complete");
+        
+        await delay();
+        console.log("Build complete");
+        
+        await delay();
+        console.log("Test complete");
+        
+        await delay();
+        console.log("Deploy complete");
+        
+        await delay();
+        console.log("Celebrate");
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
+
+runPipeline();

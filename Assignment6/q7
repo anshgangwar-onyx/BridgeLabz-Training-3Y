@@ -1,0 +1,38 @@
+function loadProfile() { 
+    return new Promise(r => setTimeout(() => r("Profile Loaded"), 2000)); 
+}
+
+function loadPosts() { 
+    return new Promise((r, rej) => setTimeout(() => {
+        if(Math.random() < 0.3) rej("Posts failed");
+        else r("Posts Loaded");
+    }, 1500)); 
+}
+
+function loadMessages() { 
+    return new Promise(r => setTimeout(() => r("Messages Loaded"), 1000)); 
+}
+
+async function checkDashboard() {
+    let start = Date.now();
+
+    let results = await Promise.allSettled([
+        loadProfile(), 
+        loadPosts(), 
+        loadMessages()
+    ]);
+
+    let end = Date.now();
+    console.log(`Total time: ${end - start}ms`);
+
+    results.forEach((res, i) => {
+        let names = ["Profile", "Posts", "Messages"];
+        if (res.status === "fulfilled") {
+            console.log(`${names[i]}: ${res.value}`);
+        } else {
+            console.log(`${names[i]}: ${res.reason}`);
+        }
+    });
+}
+
+checkDashboard();
